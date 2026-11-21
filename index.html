@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Logos — Thought that lasts.</title>
+  <meta name="description" content="A new school of ancient thought. Where classical reason meets modern precision." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preload" href="./assets/fonts/inter-500.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="./assets/fonts/ibm-plex-mono-400.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="./styles.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./node_modules/three/build/three.module.js",
+        "three/addons/": "./node_modules/three/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <canvas id="stage" aria-label="Interactive rotating classical philosopher bust rendered in ASCII matrix"></canvas>
+
+  <header class="topbar">
+    <a href="#top" class="brand" id="brand-reset">Logos</a>
+
+    <nav class="top-nav" aria-label="Primary navigation">
+      <button type="button" class="nav-link" data-panel="product">PRODUCT</button>
+      <button type="button" class="nav-link" data-panel="resources">RESOURCES</button>
+      <button type="button" class="nav-link" data-panel="blog">BLOG</button>
+      <button type="button" class="nav-link" data-panel="pricing">PRICING</button>
+    </nav>
+
+    <div class="topbar-actions">
+      <button type="button" class="sign-in-btn" data-panel="signin">SIGN IN</button>
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">MENU</button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <button type="button" class="nav-link" data-panel="product">PRODUCT</button>
+      <button type="button" class="nav-link" data-panel="resources">RESOURCES</button>
+      <button type="button" class="nav-link" data-panel="blog">BLOG</button>
+      <button type="button" class="nav-link" data-panel="pricing">PRICING</button>
+      <button type="button" class="sign-in-btn mobile-sign-in" data-panel="signin">SIGN IN</button>
+    </nav>
+  </div>
+
+  <main class="hero-hud" id="top">
+    <h1 class="hero-title hero-title--left">Thought<br />that lasts.</h1>
+
+    <p class="hero-title hero-title--right">Reason<br />to endure</p>
+
+    <p class="hero-subcopy">
+      A new school of ancient thought.<br />
+      Where classical reason meets<br />
+      modern precision
+    </p>
+
+    <aside class="callout callout--left" aria-label="Years of curiosity">
+      <span class="callout-dot" aria-hidden="true"></span>
+      <div class="callout-body">
+        <span class="callout-value">2400+</span>
+        <span class="callout-label">YEARS OF<br />CURIOSITY</span>
+      </div>
+    </aside>
+
+    <aside class="callout callout--top-right" aria-label="Arguments mapped">
+      <span class="callout-dot" aria-hidden="true"></span>
+      <div class="callout-body">
+        <span class="callout-value">11,450+</span>
+        <span class="callout-label">ARGUMENTS MAPPED</span>
+      </div>
+    </aside>
+
+    <aside class="callout callout--mid-right" aria-label="Questions answered">
+      <span class="callout-dot" aria-hidden="true"></span>
+      <div class="callout-body">
+        <span class="callout-value">48.2K</span>
+        <span class="callout-label">QUESTIONS ANSWERED</span>
+      </div>
+    </aside>
+  </main>
+
+  <div class="modal-backdrop" id="info-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-panel">
+      <div class="modal-head">
+        <span class="modal-kicker" id="modal-kicker">LOGOS // INDEX</span>
+        <button type="button" class="modal-close" id="modal-close" aria-label="Close dialog">ESC / CLOSE</button>
+      </div>
+      <h2 class="modal-title" id="modal-title">Product</h2>
+      <p class="modal-copy" id="modal-copy"></p>
+      <div class="modal-grid" id="modal-grid"></div>
+      <form class="signin-form" id="signin-form" novalidate hidden>
+        <label class="field-label" for="signin-email">SCHOLAR EMAIL</label>
+        <input class="field-input" id="signin-email" name="email" type="email" autocomplete="email" placeholder="scholar@logos.study" required />
+        <label class="field-label" for="signin-code">ACCESS PASSKEY</label>
+        <input class="field-input" id="signin-code" name="passkey" type="password" placeholder="••••••••••••" required />
+        <div class="form-footer">
+          <p class="form-status" id="signin-status" role="status" aria-live="polite"></p>
+          <button type="submit" class="submit-btn">ENTER ARCHIVE</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

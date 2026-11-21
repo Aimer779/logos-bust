@@ -1,0 +1,13 @@
+{
+  "name": "logos-bust",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "start": "node serve.mjs",
+    "verify": "node scripts/verify.mjs"
+  },
+  "dependencies": {
+    "three": "0.170.0"
+  }
+}
